@@ -2,14 +2,14 @@
     "manifestVersion": 1,
     "id": "build-release-wololo-task",
     "name": "Wololo Build and Release Tools",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "publisher": "wololo",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Tools for building/releasing with Fabrikam. Includes one build/release task.",
+    "description": "Tools for building/releasing with Xcode. Includes one build/release task.",
     "categories": [
         "Azure Pipelines"
     ],

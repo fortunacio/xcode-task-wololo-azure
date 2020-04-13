@@ -3,14 +3,14 @@
     "id": "1d29e318-5ba1-4362-81d5-152d279923ba",
     "name": "WololoBuild",
     "friendlyName": "Wololo Build",
-    "description": "Actualizado 2",
+    "description": "Tools for building/releasing with Xcode by wololo. Includes one build/release task.",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "Wololo",
     "version": {
         "Major": 0,
-        "Minor": 0,
-        "Patch": 3
+        "Minor": 1,
+        "Patch": 0
     },
     "instanceNameFormat": "WololoXcode $(samplestring)",
     "groups": [
@@ -345,5 +345,40 @@
         "Node10": {
             "target": "index.js"
         }
+    },
+    "postjobexecution": {
+        "Node10": {
+            "target": "postxcode.js",
+            "argumentFormat": ""
+        }
+    },
+    "messages": {
+        "SignIdNotFound": "Failed to find the iOS signing identity. Verify that signing and provisioning information is provided.",
+        "TempKeychainSetupFailed": "Failed to add the temporary keychain to the keychains search path.",
+        "ProvProfileDetailsNotFound": "Failed to find details for the provisioning profile: %s",
+        "ProvProfileUUIDNotFound": "Failed to find the UUID for provisioning profile: %s",
+        "MultipleWorkspacesFound": "Multiple Xcode workspace matches were found. The first match will be used: %s",
+        "WorkspaceDoesNotExist": "The Xcode workspace was specified, but it does not exist or is not a directory: %s",
+        "UseXcprettyForTestPublishing": "Enable `Use xcpretty` to publish test results. For this build, no test results will be published.",
+        "NoTestResultsFound": "No test result files matching `%s` were found. Publishing JUnit test results will be skipped.",
+        "XcodeSuccess": "Xcode task execution completed with no errors.",
+        "TempKeychainDeleteFailed": "Failed to delete the temporary keychain created during the build: `%s`",
+        "ProvProfileDeleteFailed": "Failed to delete the provisioning profile `%s`.",
+        "ExportMethodNotIdentified": "Failed to automatically identify the export method to use from the archive file. This might cause errors during the build or produce an invalid package. If export fails, either enable signing (set `Signing Style` to `Project Defaults`), or configure export manually (set `Export options` to `Plist` or `Specify`).",
+        "ExportOptionsPlistInvalidFilePath": "The `Export options` plist file does not exist at `%s`. Provide the path to a valid plist file.",
+        "SchemeRequiredForArchive": "The scheme must be specified to generate the package with xcodebuild archive and export.",
+        "WorkspaceOrProjectRequiredForArchive": "The workspace or project path must be specified to generate the package with xcodebuild archive and export.",
+        "FailedToGenerateExportOptionsPlist": "Failed to automatically generate an `Export options` plist file to export an IPA. Please specify an `Export options` plist file in `Package options`.",
+        "LocateXcodeBasedOnVersion": "Locating the developer path for Xcode `%s`",
+        "FailedToLocateSpecifiedXcode": "Unable to resolve the developer path for Xcode `%s`. Set the `%s` environment variable on the agent machine, or set `Xcode version` to `Default` or `Specify path`.",
+        "CantDetermineProvisioningStyle": "The provisioning style was not found in a pbxProject file. Automatic signing will be used. If the project uses manual signing, auto-export may fail. As a workaround, `Export options` can be set to `Plist` or `Specify`.",
+        "MultipleSchemesFound": "The workspace contains multiple schemes. No scheme selected. Use `Scheme` to specify a target scheme.",
+        "NoSchemeFound": "No shared scheme found in the workspace. Use \"Manage Schemes\" in Xcode to share a scheme.",
+        "SchemeSelected": "The workspace contains a single shared scheme. '%s' will be used.",
+        "FailedToFindScheme": "Failed to find a scheme in the workspace. Use `Scheme` to specify a target scheme.",
+        "OutputDirectoryIgnored": "Output directory for build output (binaries) ignored. Specifying an output directory is incompatible with the '%s' action.",
+        "NoDestinationPlatformWarning": "UI tests must be run against a simulator or a connected device. In the Xcode task, set `Destination platform` to a value other than `Default`.",
+        "XcprettyNotInstalled": "xcpretty is not installed on the build server. xcodebuild raw output will be shown. Publishing test results will fail if xcpretty is not installed.",
+        "XcodeRequiresMac": "Using Xcode requires a macOS agent. Building with Xcode on Linux or Windows is not supported by Apple."
     }
 }
