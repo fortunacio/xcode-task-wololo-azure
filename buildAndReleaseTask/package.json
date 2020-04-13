@@ -1,0 +1,26 @@
+{
+  "name": "buildandreleasetask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortunacio/azurewololo.git"
+  },
+  "author": "wololo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fortunacio/azurewololo/issues"
+  },
+  "homepage": "https://github.com/fortunacio/azurewololo#readme",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/q": "^1.5.2"
+  }
+}
