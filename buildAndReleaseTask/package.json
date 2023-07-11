@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/fortunacio/azurewololo#readme",
   "dependencies": {
-    "azure-pipelines-task-lib": "2.8.0"
+    "azure-pipelines-task-lib": "4.4.0"
   },
   "devDependencies": {
     "@types/node": "^13.11.1",
